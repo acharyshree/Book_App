@@ -1,0 +1,27 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Build Backend Image
+        run: docker-compose -f docker-compose.yml -f integration-test.yaml build backend
+
+      - name: Test Backend
+        run: |
+          docker-compose -f docker-compose.yml -f integration-test.yaml run --rm backend sh -c "./integration/tests.sh"
+
+      - name: Build Frontend Image
+        run: docker-compose -f docker-compose.yml -f integration-test.yaml build frontend
