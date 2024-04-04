@@ -1,0 +1,47 @@
+.loginpage {
+  background-image: url('https://img-cdn.tnwcdn.com/image?fit=1280%2C720&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2014%2F03%2Fbooks-on-shelf.jpg&signature=a243035e8f4939331e492eb7bad99ad6'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-container {
+  /* background-color: rgba(255, 255, 255, 0.8);  */
+  
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+    bottom: 10px;
+    right: 24rem;
+    height: 15rem;
+    width: 18rem;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group input {
+  width: calc(100% - 22px); /* Adjusted width to account for padding and borders */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  width:8rem
+}
+
+.btn-primary {
+  margin-top: 10px; /* Adjusted margin for button spacing */
+}

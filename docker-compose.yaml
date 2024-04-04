@@ -1,0 +1,29 @@
+version: '3'
+services:
+  frontend:
+    image: shreepathiachary/bookapp-react-container:latest
+    ports:
+      - 3000:3000
+    container_name: react-container
+    environment:
+      - WATCHPACK_POLLING=true
+    networks:
+      - mern-stack-network
+    depends_on:
+      - backend
+
+  backend:
+    image: shreepathiachary/bookapp-express-server:latest
+    ports:
+      - 4000:4000
+    container_name: express-container
+    restart: always
+    networks:
+      - mern-stack-network
+
+networks:
+  mern-stack-network:
+
+
+volumes:
+  mongoData:
