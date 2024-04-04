@@ -1,7 +1,13 @@
+Backend:
+    Backend is running on Port 4000
+Frontend:
+    Frontend is running on Port 3000
+
+
+Docker images for Frontend and backend are created  and pushed to DockerHub ,
+So you can run the application using docker-compose file 
+use command: docker-compose up
 
 
 
 
-
-
-Admin -

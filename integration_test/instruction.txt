@@ -1,0 +1,9 @@
+This is api test for backend
+ 
+
+
+1)  npm install
+   
+
+Run the test.sh file to use command
+2)  ./test.sh
