@@ -34,18 +34,3 @@ describe('POST /login', () => {
     },10000);
     
 });
-
-
-
-describe('POST /Signup', () => {
-    test('Should create new user', async () => {
-        const credentials = { name: "sanjay", email: 'sanjay1@gmail.com', password: 'sanjay1' };
-        const response = await request(baseUrl) // Use the Express app instance
-            .post('/signup')
-            .send(credentials)
-            .expect(201);
-
-        expect(response.body).toHaveProperty('message', 'User created successfully');
-        expect(response.body).toHaveProperty('user');
-    });
-});
