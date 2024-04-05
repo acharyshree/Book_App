@@ -1,5 +1,5 @@
 const request = require('supertest');
-const baseUrl = 'http://localhost:4000/api';  // Adjust path to your backend server
+const baseUrl = 'http://localhost:4000/api'; 
 
 describe('POST /login', () => {
     test('should login a user with valid credentials', async () => {
